@@ -7,6 +7,9 @@ final class Partiel
     {
 
 
+        $roman_special = array("X" => 10, "XL" => 40, "L" => 50, "XC" => 90, "C" => 100);
+
+
         if ($nb > 3000) {
             return "";
         } else {
@@ -26,6 +29,11 @@ final class Partiel
             }
 
             if ($nb > 100) {
+                for ($i = 0; $nb > 100; $i++) {
+                    $nb = $nb - 100;
+                }
+
+                var_dump($i);
             }
 
             if ($nb > 10) {
