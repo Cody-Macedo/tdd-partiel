@@ -8,6 +8,10 @@ final class Partiel
         if ($nb > 3000) {
             return "";
         } else {
+            $result = "";
+
+
+
             if ($nb == 1) {
                 return "I";
             }
@@ -22,6 +26,10 @@ final class Partiel
             }
             if ($nb == 5) {
                 return "V";
+            }
+
+            if($nb < 100){
+                var_dump($nb/10);
             }
         }
 
