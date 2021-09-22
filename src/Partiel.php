@@ -39,7 +39,7 @@ final class Partiel
                 if($resCentaine[0] != []){
                     $result .= $resCentaine;
                 }
-                var_dump($i);
+                var_dump($result);
             }
 
             if ($nb > 10) {
