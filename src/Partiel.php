@@ -33,10 +33,10 @@ final class Partiel
                 for ($i = 0; $nb > 100; $i++) {
                     $nb = $nb - 100;
                 }
-                var_dump(array_keys($roman_special_centaine, $i*100));
-                $resCentaine = array_keys($roman_special_centaine, $i*100);
+                var_dump(array_keys($roman_special_centaine, $i * 100));
+                $resCentaine = array_keys($roman_special_centaine, $i * 100);
 
-                if($resCentaine[0] != []){
+                if ($resCentaine[0] != []) {
                     $result .= $resCentaine;
                 }
                 var_dump($result);
@@ -75,16 +75,30 @@ final class Partiel
 
     public static function decimalToRomanVersion2($nb): string
     {
-        $roman_special_centaine = array("C" => 100, "CD" => 400, "D" => 500, "CM" => 900);
-        $roman_special_dizaine = array("X" => 10, "XL" => 40, "L" => 50, "XC" => 90);
-        $roman_special_unite = array("I" => 1, "IV" => 4, "V" => 5, "IX" => 9);
-        $array_roman = array_merge($roman_special_centaine, $roman_special_dizaine);
-        $array_roman = array_merge($array_roman, $roman_special_unite);
 
-        return "";
+        // il faut mettre l'array du plus grand au plus petit
+        $roman_special = array("I" => 1, "IV" => 4, "V" => 5, "IX" => 9, "X" => 10, "XL" => 40, "L" => 50, "XC" => 90, "C" => 100, "CD" => 400, "D" => 500, "CM" => 900);
+        $result = "";
+
+        if ($nb < 3000) {
+            while ($nb > 0) {
+                foreach ($roman_special as $rLetter => $value) {
+                    if($nb >= $value) {
+                        // cela ne marchera pas (à cause du tableau à l'envers) mais l'idée c'était de soustraire de la plus grande à la plus petite
+                        // pour ensuite ajouter les lettre romaine du plus petit au plus grand
+                        $nb = $nb - $value;
+                        $result .= $rLetter;
+                        break;
+                    }
+                }
+            }
+        }
+
+        return $result;
     }
 
-    public static function romanToDecimal($nb): int
+    public
+    static function romanToDecimal($nb): int
     {
         return 0;
     }
