@@ -77,6 +77,7 @@ final class Partiel
     {
 
         // il faut mettre l'array du plus grand au plus petit
+        // ajouter les milliers aussi
         $roman_special = array("I" => 1, "IV" => 4, "V" => 5, "IX" => 9, "X" => 10, "XL" => 40, "L" => 50, "XC" => 90, "C" => 100, "CD" => 400, "D" => 500, "CM" => 900);
         $result = "";
 
