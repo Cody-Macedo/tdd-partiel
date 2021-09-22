@@ -33,7 +33,12 @@ final class Partiel
                 for ($i = 0; $nb > 100; $i++) {
                     $nb = $nb - 100;
                 }
+                var_dump(array_keys($roman_special_centaine, $i*100));
+                $resCentaine = array_keys($roman_special_centaine, $i*100);
 
+                if($resCentaine[0] != []){
+                    $result .= $resCentaine;
+                }
                 var_dump($i);
             }
 
@@ -43,23 +48,23 @@ final class Partiel
 
             }
 
-            if ($nb == 1) {
-                return "I";
-            }
-            if ($nb == 2) {
-                return "II";
-            }
-            if ($nb == 3) {
-                return "III";
-            }
-            if ($nb == 4) {
-                return "IV";
-            }
-            if ($nb == 5) {
-                return "V";
-            }
-
-            var_dump($nb % 1000);
+//            if ($nb == 1) {
+//                return "I";
+//            }
+//            if ($nb == 2) {
+//                return "II";
+//            }
+//            if ($nb == 3) {
+//                return "III";
+//            }
+//            if ($nb == 4) {
+//                return "IV";
+//            }
+//            if ($nb == 5) {
+//                return "V";
+//            }
+//
+//            var_dump($nb % 1000);
 
 
         }
