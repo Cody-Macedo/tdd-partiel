@@ -73,6 +73,11 @@ final class Partiel
 
     }
 
+    public static function decimalToRomanVersion2($nb): string
+    {
+        return 0;
+    }
+
     public static function romanToDecimal($nb): int
     {
         return 0;
