@@ -22,7 +22,7 @@ final class PartielTest extends TestCase
 
     public function testDecimalRoman4(): void
     {
-        $this->assertEquals("IV", Partiel::decimalToRoman(2345));
+        $this->assertEquals("IV", Partiel::decimalToRoman(2456));
     }
 
 }
