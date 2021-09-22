@@ -17,18 +17,22 @@ final class Partiel
                 for($i = 0 ; $nb > 1000; $i++){
                     $nb = $nb - 1000;
                 }
-                if($i == 1){
+
+                for ($nbX = 0 ; $nbX < $i; $nbX++){
                     $result .= "X";
-                }else if($i == 2){
-                    $result .= "XX";
-                }else if($i == 3){
-                    $result .= "XXX";
                 }
+//                if($i == 1){
+//                    $result .= "X";
+//                }else if($i == 2){
+//                    $result .= "XX";
+//                }else if($i == 3){
+//                    $result .= "XXX";
+//                }
                 var_dump($result);
             }
 
             if ($nb > 100) {
-
+                $nb =
             }
 
             if ($nb > 10) {
